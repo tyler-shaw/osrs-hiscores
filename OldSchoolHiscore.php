@@ -154,15 +154,15 @@ class OldSchoolHiscore {
 	private function parseResponse() {
 		$lines = explode("\n", $this->raw_response);
 		
-		foreach($this->skills as $key) {
+		foreach($this->skills as $key as $value) {
 			
 			$item = array_shift($lines);
 			
 			$numbers = explode(',', $item);
 			
-			$this->skills[$key]['rank'] = $numbers[0];
-			$this->skills[$key]['level'] = $numbers[1];
-			$this->skills[$key]['experience'] = $numbers[2];
+			$this->skills[$key]['rank'] = (int)$numbers[0];
+			$this->skills[$key]['level'] = (int)$numbers[1];
+			$this->skills[$key]['experience'] = (int)$numbers[2];
 			
 		}
 	}
