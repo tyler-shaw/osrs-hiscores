@@ -154,7 +154,7 @@ class OldSchoolHiscore {
 	private function parseResponse() {
 		$lines = explode("\n", $this->raw_response);
 		
-		foreach($this->skills as $key as $value) {
+		foreach($this->skills as $key => $value) {
 			
 			$item = array_shift($lines);
 			
