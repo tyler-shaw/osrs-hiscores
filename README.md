@@ -5,7 +5,7 @@ A simple PHP class for accessing Old School RuneScape Hiscores.
 
 Example Usage:
 
-
+```php
 // A try-catch block is a must, as the constructor throws exceptions.
 
 try {
@@ -33,3 +33,4 @@ catch(Exception $e) {
 	// You would want to handle this exception better, of course.
 	die('An exception occurred with the following message: ' . $e->getMessage());
 }
+```
