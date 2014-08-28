@@ -14,6 +14,7 @@ class OldSchoolHiscore {
 	private $raw_response;
 	private $curl_success;
 	private $valid_username;
+	// Skill names are required since the response from RuneScape does not include them.
 	private $skills = array(
 		'overall' => array(),
 		'attack' => array(),
@@ -150,6 +151,8 @@ class OldSchoolHiscore {
 	 * Explodes the lines of the response, and then explodes those yet again
 	 * to determine the three different desired values. It then stores those in
 	 * their respective variables.
+	 * 
+	 * @return void Stores values, but returns nothing.
 	 */
 	private function parseResponse() {
 		$lines = explode("\n", $this->raw_response);
